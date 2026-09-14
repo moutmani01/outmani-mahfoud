@@ -1,0 +1,155 @@
+Engineering
+
+What kinds of software projects have you worked on before? Which development environments, languages, databases?
+I was always involved as a DevOps & Infrastructure engineer in software projects, worked on many critical applications and delivering the necessary tools to confirm that the code is secure and ready in time, working perfectly in production.
+
+I am not a developer, but I do have good knowledge of the Java development environment, worked on many applications in Python, ReactJS, and a little PHP — but again, not as a coder, but as a DevOps and infrastructure engineer, making sure everything else works and giving the developers the best environment possible to run their code.
+
+I have implemented many complex database architectures such as Oracle RAC, DB2 pureScale, PGpool with PostgreSQL, AlwaysOn MS SQL, and others for mission-critical applications that require zero downtime. I have helped developers optimize their SQL queries, worked with data engineers on their ETL, tuned database engines, worked on backups and restores, and worked on best security practices for databases/apps.
+
+I have had many projects where I had to migrate, by myself, legacy apps from old VMs (code in GitLab, barely any instructions on how to build or run it) to best practices and new technologies (building GitLab CI pipelines to build, test, check security, check code, and run on Kubernetes).
+
+...
+How extensive is your experience of Python software engineering? Would you describe yourself as a high quality coder? Why?
+I can’t describe myself as a high quality coder, mainly because I am not a developer. My Python experience came from infrastructure tasks. I was not following best coding practices of Python, but it was doing the job. Over time I’ve adopted better structuring practices for my scripts and apps, to keep everything organized and so it’s easy for someone else to use it and improve it.
+
+My experience with Python is just enough to automate and optimize my work. For example, I developed many Ansible tasks that can communicate with legacy apps by API, do repeated tasks, and run on all OS (Windows, AIX, RHEL).
+
+...
+What is your most senior role in a software engineering organisation? Describe your span of control, and the diversity of products, functions and teams you led.
+I was the DevOps team lead in my previous experience. I was the guy who brought DevOps, DevSecOps and Kubernetes technologies for the first time to the bank — the person who got involved in all critical new applications and projects, bringing my expertise in designing and in the implementation.
+
+My team was made of 6 amazing engineers with the label of the system infrastructure team, and I helped them get in touch with and learn all these new technologies at that time — from Docker/Kubernetes, to the DevOps toolchain (Ansible, GitLab CI, Jenkins, Nexus/Sonatype, SonarQube, OWASP ZAP and dependency check, ArgoCD, Harbor, Trivy…), to the observability stack with the ECK stack and LGTM stack.
+
+We had the chance to migrate many critical apps, like the mobile bank app, from legacy Java on VMs with no DevOps philosophy, to the benefit of the DevOps CI/CD toolchain running on Kubernetes, and being well observed by LGTM — which improved the availability of the app to 99.9%, and gave us answers we could never give before, like: why is the app slow? Which version is where? Is it an infrastructure issue, a code issue, or a user issue?
+
+Another chance we had was a major project bringing in a new Core Banking system, and even though it’s a very closed product, we managed to implement a CI/CD pipeline using Ansible and GitLab CI — improving time to market from weeks to minutes by automating every step possible across many teams.
+
+...
+What is your proudest success as an engineer?
+My proudest success is seeing the impact of my work — the one I always remember is from my previous job, where I had a meeting with the IT Director, Infrastructure Manager, Network Manager, and Security Manager.
+
+It was 3 months after I got in. I had gotten a report on all the main pains they had — from EOL machines, to vulnerabilities, to critical app complaints on availability and performance, and many other issues.
+
+I worked on each problem myself and improved the EOL machines (AIX, RHEL and Windows) from 130 to 6, improved the vulnerability percentage from 18% to 5%, fixed most of the unstable apps, and gave reports on my diagnostics for many slow apps.
+
+In that meeting, all those metrics were put in front of the directors, and I was called out by name and thanked by all of them.
+
+...
+Describe your experience building large systems with many services - web front ends, REST APIs, data stores, event processing and other kinds of integration between components. What are the key things to think about in regard to architecture, maintainability, and reliability in these large systems?
+One of the biggest projects I worked on is the mobile banking app, which has many components: the mobile app (iOS and Android) as the frontend, 11 microservices running in Kubernetes as the backend, which point to an API gateway, which in turn points to all the banking APIs and legacy systems. Oracle RAC is used as the database. The app gets a new version every couple of weeks with the help of CI/CD, everything is monitored by Dynatrace end to end, and production is replicated to a second data center (DC2), used as active-active (80%-20%).
+
+The key to getting a bulletproof system like this was an active-active architecture, which keeps the system available even if one data center fails.
+
+For reliability, each component is observed by one system, which gives better traces of every call and helps catch issues before they reach production or clients.
+
+For maintainability, the CI/CD pipeline includes automated quality and security gates (SonarQube, OWASP ZAP, dependency check, Trivy) before each release, so changes can go out every couple of weeks without maintainability being sacrificed for speed.
+
+...
+How comprehensive would you say your knowledge of a Linux distribution is, from the kernel up? How familiar are you with low-level system architecture, runtimes and Linux distro packaging? How have you gained this knowledge?
+I know RPM well, as I have built RPM packages before. Systemd is also good for me. I am more familiar with the Fedora family than the Debian family, though I’ve worked on both using Foreman and Red Hat Satellite. I have a good base knowledge at the OS/service level, and good knowledge of the kernel and boot level (GRUB) — I’ve had a lot of experience with systems that can’t boot, multi-disk boot setups, mixed GRUB and Windows boot configurations, and corrupted OS recovery. That said, I don’t have hands-on experience with kernel modules or sysctl tuning. I do know /proc and how each process touches files or memory, but I’ve never done strace-level debugging.
+
+I gained the knowledge of RPM when I worked in my second job, as they were building their own software and installing it using RPM and dpkg. Also, with the bank, I had a lot of experience with open source packages that couldn’t be downloaded directly, as they worked on an air-gapped network — so I had to get the code for those packages, build it, package it in RPM, and install it. For Linux in general, it’s a day-to-day job: each time I get an issue or a new task I’ve never done before, I go learn it, then fix it.
+
+...
+Describe your networking experience. How do you go about troubleshooting complex networks ?
+On the system and virtualization level, I do have experience and good analysis skills at the network level, to understand which layer an issue is coming from, including other network protocols like DHCP, link aggregation, and simple routing.
+
+For example, if I had an issue where two servers can’t communicate with each other, I start my analysis by going through all the layers — from physical, to VLAN, to IP configuration, to talking to the gateway, traceroute, checking ports, checking app level like HTTP headers or the protocol used…
+
+But everything beyond that — like complex routing (EIGRP or OSPF) or advanced network setups like SD-WAN — I understand the basics and fundamentals, but the network experts are the ones who handle it. So sometimes I can fix the issue myself, and sometimes it requires help from one of our network colleagues.
+
+...
+Describe your experience with large-scale IT operations, SAAS, Private Clouds or other running services, in a devops or IS or system administration capacity
+In a large-scale IT environment, it’s always good to have knowledge of ITIL, and understanding best practices is key to keeping a large-scale infrastructure stable. In my second job, I worked in a distributed environment of 4,500 servers across 3 continents, plus AWS, as a system administrator. I believe the key to good operations is automation and infrastructure as code — we used Ansible and Puppet to make everything into products and simplify the operations we had.
+
+The two biggest challenges we had were, first, migrating to AWS — you have to rethink each system rather than just migrating everything V2V. Sometimes it made sense to containerize the app and send it to ECS or EKS; sometimes you could merge 3 VMs (web, app, database) into one to reduce AWS usage. And on the other hand, working on legacy systems that hadn’t the chance to evolve to those best practices was challenging — you had to understand how the system works, read logs, test, and improve.
+
+...
+Describe your experience with public cloud based operations - how well do you understand large-scale public cloud estate management and developer experience?
+The two clouds I worked with the most are Azure in first place, and AWS in second.
+
+On AWS, I had the chance to be involved in a large project migrating private infrastructure to the cloud, working on a hybrid cloud where some apps on AWS had to communicate with apps on-premise. ELK on AWS was much easier to operate than the one on-premise.
+
+And on Azure, I had the chance in my third job to work on many projects:
+
+	•	Building a new DevOps toolchain based on Azure DevOps, and helping developers migrate from an on-premises toolchain to Azure. this toolchain work was really about developer experience, making it easier and faster for developers to ship
+	•	Working on Entra ID and M365 for many clients, helping them migrate from Exchange servers to the cloud, or use a hybrid system with Entra Connect and Exchange Hybrid
+	•	Azure VDI was also a very good solution — one client found it much cheaper and easier to manage, and we migrated workspaces from VMware Horizon VDI to Azure
+
+...
+What is the next technology you want to learn about, and why ? How do you plan on learning it ?
+Honestly, I want to learn more about AI and machine learning — how to feed your own data to AI to get very specific value out of it.
+
+For example, let’s say I have wiki documentation that covers every inch of my infrastructure. Feeding this data to an AI could help me solve issues much more easily — like “you’re getting this error because App31 is down, start it with this command.” This is just a simple idea in my head right now that I want to put into real life.
+
+Everyone sees AI as the future, like the invention of fire — it will change everything, and I plan to learn more and more about it. Over the next year, I want to go from fundamentals to hands-on practice: first, deepen my understanding of how ML and LLMs actually work (a few months), then build a real project using an existing well-known LLM fed with my own infrastructure data — like the wiki documentation example above — to get something working end to end (next few months). From there, I want to go deeper into building and training my own ML models, to really understand what’s happening under the hood rather than just using existing tools.
+
+...
+Do you have experience with customer-facing roles ?
+In my second job, working with big infrastructure, I was in L3 support, and we had a ticketing system where we handled tickets from branches (internal customers) about their infrastructure issues — from simple solutions like starting an app, to complex months-long work with many calls, meetings, and on-site visits, where we needed to build a new automation specific to that customer.
+
+...
+Outline your software documentation experience.
+In my last three jobs, documentation became one of my priorities. We generally used open source wikis like Docmost, Outline, and MediaWiki. I installed the tools, convinced management about it, and pushed my teammates and other teams to document KB-style articles, implementation references, history of operations, and cheat sheets for some tools. And from experience, I found out that documenting your work helps you more than it helps your teammates — our daily job involves many technologies, and it changes from environment to environment, so remembering what you did on each one is impossible. When you read a wiki page about that environment (either one you wrote or a teammate wrote), you understand the importance of documentation.
+
+Education
+
+We consider academic results in high school and university for all roles, regardless of seniority or department. To enjoy a long and varied career at Canonical, one would need to tackle problems that cannot be defined today! From engineering to marketing to operations and sales, we intensely value colleagues who are able to puzzle through difficult problems and find the optimal path forward. 
+
+How did you rank in your high school, in your final year in maths and hard sciences? Which was your strongest?
+I always ranked among the top 3 in science subjects (math, physics, and life & earth sciences), generally first in math and physics. I ranked 5th in the school overall.
+...
+How did you rank in your high school, in your final year in languages and the arts? Which was your strongest?
+We didn’t have Arts as a school subject, but I ranked 5th in class in languages (Arabic, French, English).
+...
+Please state your high school graduation results or university entrance results, along with the system used, and how to understand those. For example, in the US, you might give your SAT or ACT scores. In Germany, you might give your scores 1-5.
+The Moroccan education system grades on a scale of 0 to 20, where 10/20 is the minimum passing grade, and anything above 16/20 is considered excellent (roughly comparable to top-tier honors in other systems). I graduated high school with 15/20 on the Baccalauréat, the national exam required to complete secondary education and gain university entrance. I then scored 16/20 in University.
+...
+What sort of high school student were you? Outside of class, what were your interests and hobbies?  What would your high school peers remember you for, if we asked them?
+If you asked one of my old friends who studied with me in high school and college, he would say we only had 3 things in life: study, video games, and football — and he would say I was one of the best, if not the best, at all of them.
+
+We played football twice a week, competing against other schools — I was on the team that represented my school. Video games were just our way to chill and forget all the stress of life.
+
+...
+Which university and degree did you choose? What other universities did you consider, and why did you select that one?
+After high school, I was torn between architecture and computer science — architecture at ENA (the only public architecture university), or computer science at ENSA Berrechid (one of the best-known universities in Morocco in technology fields). I chose computer science because of my brother, who had been in the field for 6 years before me, and I made a great choice, as I was getting great free advice from someone who, for sure, wanted the best for me.
+...
+At university, did you do particularly well at any area of your degree?
+In C programming, I was way ahead of my colleagues because I had studied it all summer (I chose to learn C because of what I found on forums at the time, saying it’s the best starting point for understanding computer science). I even had a chat with my teacher to show him where I was, and he told me I had already gotten into the fifth semester.
+...
+Overall, what was your degree result and how did that reflect on your ability?
+My degree result was 16/20. I wasn’t focused on being top of the class — I was working while studying, so my priority was really learning and passing. 16/20 while balancing a job taught me how to handle real responsibility and pressure early on, not just perform well in a purely academic setting.
+
+...
+In high school and university, what did you achieve that was exceptional?
+In a high school math competition, I didn’t get the best grade, but I was the only one in the competition to answer a very hard math problem. When the professor was giving the results, he congratulated me specifically for this achievement, even though I wasn’t close to the top scores.
+...
+What leadership roles did you take on during your education?
+In university, I was class president for one year. My responsibility was gathering all the pain points of my classmates — like not enough time to prepare for exams, or a teacher not coming to class many times — and bringing them to the university’s board of directors.
+
+Context
+
+Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?
+I was always a fan of keeping software and information free for everyone, and I can see that Canonical shares that vision. The Linux kernel is the best example of how keeping a product open can actually accelerate its improvement.
+
+What I see as challenging is that Red Hat has dominated the enterprise space even though it’s a paid product — largely through deep enterprise support, certifications, and trust built over decades in many industries. The good news is that there’s real opportunity for Canonical to grow further into enterprise, but it also means the work isn’t done — that’s why a role like this one, focused on deepening enterprise adoption, feels meaningful to me.
+...
+
+Who are Canonical's key competitors, and how should Canonical set about winning?
+
+
+Red Hat in first place, and from experience I see many products show installation instructions for RHEL and not for Ubuntu — many other enterprise products have RPM packages and not DPKG. So, from my point of view, to convince an enterprise to use Ubuntu, you need to go around and show that other products work well, and maybe are more stable or much easier to set up on Ubuntu.
+
+Windows desktop is also a big competitor in the endpoint space, but I’ve seen in the last few years that Ubuntu is getting a bigger fanbase, so Canonical is doing a good job on that side
+...
+Why do you most want to work for Canonical?
+Honestly, two main reasons. Canonical is one of the biggest technology leaders in OS. I’ve worked with Ubuntu many times on servers and endpoints, and getting the chance to put a brick in this great wall is an honor — to help enterprises adopt this OS in their environment and spread this beautiful technology to the world.
+
+Secondly, I was always hoping to find a remote job to get the best work-life balance possible, and I see Canonical has this philosophy built in.
+...
+What would you most want to change about Canonical?
+I could say nothing, but if I had to choose one thing, it would be the support of many products on Ubuntu. I know it’s a long journey to get all products to move from Windows or Red Hat to Ubuntu, but I hope it will focus more on endpoint apps, as I see a shift of end users moving from Mac and Windows to Ubuntu nowadays, looking for more freedom and security. So I hope Canonical benefits from this change and keeps its promise to always provide a beautiful, secure, stable, free OS.
+...
+What gets you most excited about this role?
+After spending years in enterprise infrastructure, I am very excited to change perspective from the client side to the product side — instead of solving one bank’s problems, my work would reach many clients, now and in the future. And I’m excited to see how a global product company works from the inside.
